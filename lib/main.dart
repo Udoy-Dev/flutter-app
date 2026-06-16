@@ -32,6 +32,7 @@ class HomeActivity extends StatelessWidget {
           IconButton(onPressed: (){}, icon: Icon(Icons.add)),
           IconButton(onPressed: (){}, icon: Icon(Icons.add)),
           IconButton(onPressed: (){}, icon: Icon(Icons.add)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
           IconButton(onPressed: (){}, icon: Icon(Icons.add))
         ],
       ),
