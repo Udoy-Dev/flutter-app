@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
 class HomeActivity extends StatelessWidget {
   const HomeActivity({super.key});
 
+  MySnackBar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message,style: TextStyle(color: Colors.white,backgroundColor: Colors.green),))
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +35,11 @@ class HomeActivity extends StatelessWidget {
         elevation: 0,
         title: Text("Hello Flutter This not",style: TextStyle(color: Colors.white,fontSize: 20),),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.add))
+          IconButton(onPressed: (){MySnackBar("Hello", context);}, icon: Icon(Icons.add,color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.search,color: Colors.white)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.notifications,color: Colors.white)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Colors.white)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Colors.white))
         ],
       ),
       body: Center(
